@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style1.css">
+    <title>Product Details</title>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <header>
+            <h1>Product Details</h1>
+        </header>
+
+        <main>
+            <!-- Product Table -->
+            <table>
+                <thead>
+                    <tr>
+                        <th>Product ID</th>
+                        <th>Name</th>
+                        <th>Description</th>
+                        <th>Image</th>
+                        <th>Price (in INR)</th>
+                        <th>Status</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody id="productTable">
+                    <!-- Example Product Row -->
+                    <tr>
+                        <td>1</td>
+                        <td>Product A</td>
+                        <td>A sample product description.</td>
+                        <td>
+                            <img src="example.jpg" alt="Product A" style="width: 50px; height: auto;">
+                        </td>
+                        <td>500</td>
+                        <td>Available</td>
+                        <td>
+                            <div class="icon-group">
+                                <span class="icon edit-icon" title="Edit">&#9998;</span> 
+                                <span class="icon view-icon" title="View">&#128065;</span> 
+                                <span class="icon delete-icon" title="Delete">&#128465;</span> 
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <!-- Add Product Form -->
+            <div class="form-container">
+                <h2 id="formTitle">Add New Product</h2>
+                <form id="addProductForm" enctype="multipart/form-data">
+                    
+                    <input type="text" id="productName" name="name" placeholder="Product Name" required>
+                    <input type="text" id="productDescription" name="description" placeholder="Product Description" required>
+                    <input type="number" id="productPrice" name="price" placeholder="Price (in INR)" required>
+                    <input type="file" id="productImage" name="image" accept="image/*">
+
+                    <button type="submit" id="submitButton">Add Product</button>
+                    <button type="button" id="updateButton" style="display: none;" onclick="updateProduct()">Update Product</button>
+                </form>
+            </div>
+
+            <!-- View Product Modal -->
+            <div id="viewProductModal" class="modal">
+                <div class="modal-content">
+                    <span class="close" id="closeModal">&times;</span>
+                    <h2 id="modalProductName"></h2>
+                    <img id="modalProductImage" src="" alt="Product Image" style="max-width: 100%; height: auto;">
+                    <p id="modalProductDescription"></p>
+                    <p><strong>Price:</strong> ₹ <span id="modalProductPrice"></span></p>
+                    <p><strong>Status:</strong> <span id="modalProductStatus"></span></p>
+                </div>
+            </div>
+
+        </main>
+
+    </div>
+
+    <script src="script2.js"></script>
+
+</body>
+
+</html>
