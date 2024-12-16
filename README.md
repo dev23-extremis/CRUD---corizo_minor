@@ -1,4 +1,4 @@
-# CRUD---corizo_minor
+# CRUD application
 The Repository contains a CRUD application
 
 📁 Folder Structure:
