@@ -45,4 +45,4 @@ CRUD/   # CRUD is the main application folder
 4. Backend: server.js handle requests, perform database operations.
 5. Modular Structure: Separation of concerns with models for database structure and public for static files. 
 
-**Note**: The provided code can be used to create a E-commerce website
+**Note**: The provided code can be used as a basic framework to create a E-commerce website.
